@@ -64,6 +64,7 @@ const ReactVideoGallery = () => {
                                             autoplay={model}
                                             controls={['Play', 'Seek', 'Volume']}
                                             poster={item.poster}
+                                            playsInLine
                                             >
                                                 <source src={item.videoUri} type="video/mp4" />
                                         </Video>
