@@ -41,16 +41,7 @@ const ReactVideoGallery = () => {
             <div className="gallery">
                 {data.map((item,index)=>{
                     let divRef = createRef(null);
-                    const openModel = () => {
-                        divRef.current.classList.add('model');
-                        divRef.current.classList.remove('video');
-                        setModel(true);
-                    }
-                    const closeModel = () => {
-                        divRef.current.classList.remove('video');
-                        divRef.current.classList.add('model');
-                        setModel(false);
-                    }
+                    
                     return(
                         <div className = 'it-container'>
                             <div className='header'>
@@ -61,7 +52,7 @@ const ReactVideoGallery = () => {
                                     <div className="video-container">
                                         <Video
                                             style={{width: '100%'}}
-                                            autoplay={model}
+                                            
                                             controls={['Play', 'Seek', 'Volume']}
                                             poster={item.poster}
                                             playsInLine
@@ -74,7 +65,7 @@ const ReactVideoGallery = () => {
                                     <div className="video-container">
                                         <Video
                                             style={{width: '100%'}}
-                                            autoplay={model}
+                                            
                                             controls={['Play', 'Seek', 'Volume']}
                                             poster={item.poster2}
                                             >
