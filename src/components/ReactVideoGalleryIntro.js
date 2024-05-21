@@ -12,7 +12,7 @@ import './react-video-gallery.css'
 import dtl1222 from '../videos/12:22DTL.mp4'
 import FOl1222 from '../videos/12:22FO.mp4'
 import dtl0524 from '../videos/05:24DTL.mov'
-import FOl0524 from '../videos/05:24FO.MOV'
+import FOl0524 from '../videos/05:24FO.mov'
 
 const ReactVideoGalleryMain = () => {
     const [model, setModel] = useState(false);

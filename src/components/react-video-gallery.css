@@ -318,8 +318,7 @@ p {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    padding-right:100px;
-    padding-left: 100px;
+    padding: 10px;
     margin-bottom: 10px;
     margin-top: 10px;
     border-radius: 15px;

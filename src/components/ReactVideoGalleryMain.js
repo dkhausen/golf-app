@@ -11,15 +11,18 @@ import './react-video-gallery.css'
 import dtl1222 from '../videos/12:22DTL.mp4'
 import FOl1222 from '../videos/12:22FO.mp4'
 import dtl0524 from '../videos/05:24DTL.mov'
-import FOl0524 from '../videos/05:24FO.MOV'
+import FOl0524 from '../videos/05:24FO.mov'
 import dtl0424 from '../videos/04:24DTL.mov'
 import FOl0424 from '../videos/04:24FO.mov'
-import dtl0324 from '../videos/03:24DTL.MOV'
-import FOl0324 from '../videos/03:24FO.MOV'
+import dtl0324 from '../videos/03:24DTL.mov'
+import FOl0324 from '../videos/03:24FO.mov'
 import dtl0224 from '../videos/02:24DTL.mov'
 import FOl0224 from '../videos/02:24FO.mov'
-import dtl0124 from '../videos/01:24DTL.MOV'
-import FOl0124 from '../videos/01:24FO.MOV'
+import dtl0124 from '../videos/01:24DTL.mov'
+import FOl0124 from '../videos/01:24FO.mov'
+import PosterDTL0124 from '../videos/01:24Poster.png'
+import dtl1223 from '../videos/12:23DTL.mov'
+import FOl1223 from '../videos/12:23FO.mov'
 
 const ReactVideoGalleryMain = () => {
     const data = useMemo(() => [
@@ -73,6 +76,17 @@ const ReactVideoGalleryMain = () => {
             date: '01/2024',
             type: 'Iron'
         },
+        {
+            id: 6,
+            downTheLinePoster: '',
+            faceOnPoster: '',
+            downTheLine: dtl1223,
+            faceOn: FOl1223,
+            description: 'test',
+            date: '12/2023',
+            type: 'Iron'
+        },
+        
         
     ], []);
 
@@ -116,6 +130,7 @@ const ReactVideoGalleryMain = () => {
                     {data.map((item, index) => (
                         <div className="video-container2" key={index} ref={videoElements[index]}>
                             <div className='header2'>{item.date}</div>
+                            <div className='header2'>{item.type}</div>
                             <div className="video-fade">
                                 <div className='video-container'>
                                     <Video
