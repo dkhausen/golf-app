@@ -13,13 +13,18 @@ import dtl1222 from '../videos/12:22DTL.mp4'
 import FOl1222 from '../videos/12:22FO.mp4'
 import dtl0524 from '../videos/05:24DTL.mov'
 import FOl0524 from '../videos/05:24FO.mov'
+import poster1212 from '../videos/12:22Poster.png'
+import posterFO1212 from '../videos/12:22PosterFO.png'
+import poster0524 from '../videos/05:24Poster.png'
+import posterFO0524 from '../videos/05:24PosterFO.png'
 
 const ReactVideoGalleryMain = () => {
     const [model, setModel] = useState(false);
     let data = [
         {
             id: 1,
-            poster: '',
+            downTheLinePoster: poster1212,
+            faceOnPoster: posterFO1212,
             videoUri: dtl1222,
             videoUri2: FOl1222,
             header: '12/2022',
@@ -27,15 +32,14 @@ const ReactVideoGalleryMain = () => {
         },
         {
             id: 2,
-            poster: '',
+            downTheLinePoster: poster0524,
+            faceOnPoster: posterFO0524,
             videoUri: dtl0524,
             videoUri2: FOl0524,
             header: '05/2024',
             description: 'test'
         },
     ]
-
-   
 
 
     return (
@@ -53,6 +57,7 @@ const ReactVideoGalleryMain = () => {
                                             <Video
                                                 style={{width: '100%'}}
                                                 controls={['Play', 'Seek', 'Volume']}
+                                                poster={item.downTheLinePoster}
                                                 playsInLine
                                                 >
                                                     <source src={item.videoUri} type="video/mp4" />
@@ -62,6 +67,7 @@ const ReactVideoGalleryMain = () => {
                                             <Video
                                                 style={{width: '100%'}}
                                                 controls={['Play', 'Seek', 'Volume']}
+                                                poster={item.faceOnPoster}
                                                 playsInLine
                                                 >
                                                     <source src={item.videoUri2} type="video/mp4" />
