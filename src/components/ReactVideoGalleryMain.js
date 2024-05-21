@@ -12,6 +12,18 @@ import dtl1222 from '../videos/12:22DTL.mp4'
 import FOl1222 from '../videos/12:22FO.mp4'
 import dtl0524 from '../videos/05:24DTL.mov'
 import FOl0524 from '../videos/05:24FO.mov'
+import poster0524 from '../videos/05:24Poster.png'
+import posterFO0524 from '../videos/05:24PosterFO.png'
+import poster0424 from '../videos/04:24Poster.png'
+import posterFO0424 from '../videos/04:24PosterFO.png'
+import poster0324 from '../videos/03:24Poster.png'
+import posterFO0324 from '../videos/03:24PosterFO.png'
+import poster0224 from '../videos/02:24Poster.png'
+import posterFO0224 from '../videos/02:24PosterFO.png'
+import poster0124 from '../videos/01:24Poster.png'
+import posterFO0124 from '../videos/01:24PosterFO.png'
+import poster1223 from '../videos/01:24Poster.png'
+import posterFO1223 from '../videos/01:24PosterFO.png'
 import dtl0424 from '../videos/04:24DTL.mov'
 import FOl0424 from '../videos/04:24FO.mov'
 import dtl0324 from '../videos/03:24DTL.mov'
@@ -20,7 +32,6 @@ import dtl0224 from '../videos/02:24DTL.mov'
 import FOl0224 from '../videos/02:24FO.mov'
 import dtl0124 from '../videos/01:24DTL.mov'
 import FOl0124 from '../videos/01:24FO.mov'
-import PosterDTL0124 from '../videos/01:24Poster.png'
 import dtl1223 from '../videos/12:23DTL.mov'
 import FOl1223 from '../videos/12:23FO.mov'
 
@@ -28,8 +39,8 @@ const ReactVideoGalleryMain = () => {
     const data = useMemo(() => [
         {
             id: 1,
-            downTheLinePoster: '',
-            faceOnPoster: '',
+            downTheLinePoster: poster0524,
+            faceOnPoster: posterFO0524,
             downTheLine: dtl0524,
             faceOn: FOl0524,
             description: 'test',
@@ -38,8 +49,8 @@ const ReactVideoGalleryMain = () => {
         },
         {
             id: 2,
-            downTheLinePoster: '',
-            faceOnPoster: '',
+            downTheLinePoster: poster0424,
+            faceOnPoster: posterFO0424,
             downTheLine: dtl0424,
             faceOn: FOl0424,
             description: 'test',
@@ -48,8 +59,8 @@ const ReactVideoGalleryMain = () => {
         },
         {
             id: 3,
-            downTheLinePoster: '',
-            faceOnPoster: '',
+            downTheLinePoster: poster0324,
+            faceOnPoster: posterFO0324,
             downTheLine: dtl0324,
             faceOn: FOl0324,
             description: 'test',
@@ -58,8 +69,8 @@ const ReactVideoGalleryMain = () => {
         },
         {
             id: 4,
-            downTheLinePoster: '',
-            faceOnPoster: '',
+            downTheLinePoster: poster0224,
+            faceOnPoster: posterFO0224,
             downTheLine: dtl0224,
             faceOn: FOl0224,
             description: 'test',
@@ -68,8 +79,8 @@ const ReactVideoGalleryMain = () => {
         },
         {
             id: 5,
-            downTheLinePoster: '',
-            faceOnPoster: '',
+            downTheLinePoster: poster0124,
+            faceOnPoster: posterFO0124,
             downTheLine: dtl0124,
             faceOn: FOl0124,
             description: 'test',
@@ -78,8 +89,8 @@ const ReactVideoGalleryMain = () => {
         },
         {
             id: 6,
-            downTheLinePoster: '',
-            faceOnPoster: '',
+            downTheLinePoster: poster1223,
+            faceOnPoster: posterFO1223,
             downTheLine: dtl1223,
             faceOn: FOl1223,
             description: 'test',
@@ -136,6 +147,7 @@ const ReactVideoGalleryMain = () => {
                                     <Video
                                         style={{ width: '100%' }}
                                         controls={['Play', 'Seek', 'Volume']}
+                                        poster={item.downTheLinePoster}
                                         playsInLine
                                     >
                                         <source src={item.downTheLine} type="video/mp4" />
