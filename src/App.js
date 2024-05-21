@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactVideoGallery from './components/ReactVideoGallery';
+import ReactVideoGalleryIntro from './components/ReactVideoGalleryIntro';
+import ReactVideoGalleryMain from './components/ReactVideoGalleryMain';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
     flexDirection: 'column'
 }}>
     <h1>test</h1>
-    <ReactVideoGallery/>
+    <ReactVideoGalleryIntro/>
+    <ReactVideoGalleryMain/>
     </div>
     </>
   );
