@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/golf-app/static/css/main.c9b5d43f.css",
-    "main.js": "/golf-app/static/js/main.af7a812b.js",
+    "main.js": "/golf-app/static/js/main.823785ee.js",
     "static/js/453.3863798f.chunk.js": "/golf-app/static/js/453.3863798f.chunk.js",
+    "static/media/04:24DTL.mov": "/golf-app/static/media/04:24DTL.f78b9c44a84733b97cb1.mov",
     "static/media/03:24DTL.mov": "/golf-app/static/media/03:24DTL.e1ae354cbde81b7eccc1.mov",
     "static/media/01:24FO.mov": "/golf-app/static/media/01:24FO.63882ec8e12f153b46f3.mov",
     "static/media/03:24FO.mov": "/golf-app/static/media/03:24FO.412a0e01fb10543659ec.mov",
     "static/media/04:24FO.mov": "/golf-app/static/media/04:24FO.2562a63ebf63e3695ff9.mov",
     "static/media/01:24DTL.mov": "/golf-app/static/media/01:24DTL.eb43964e7423502e8cee.mov",
-    "static/media/04:24DTL.mov": "/golf-app/static/media/04:24DTL.29e48893598a30c173d4.mov",
     "static/media/05:24FO.mov": "/golf-app/static/media/05:24FO.2414605877e8c26fbc25.mov",
     "static/media/05:24DTL.mov": "/golf-app/static/media/05:24DTL.69bc5aee4a6037c9a487.mov",
     "static/media/02:24FO.mov": "/golf-app/static/media/02:24FO.3e171586f54e121ac0b4.mov",
@@ -18,13 +18,22 @@
     "static/media/12:23FO.mov": "/golf-app/static/media/12:23FO.d64543f21acd1baaa0b4.mov",
     "static/media/02:24DTL.mov": "/golf-app/static/media/02:24DTL.7ddc8aed7a79dcb23291.mov",
     "static/media/12:23DTL.mov": "/golf-app/static/media/12:23DTL.fd41aedabd881d0a1918.mov",
+    "static/media/01:24PosterFO.png": "/golf-app/static/media/01:24PosterFO.4f6615c0f3878d8308d0.png",
+    "static/media/02:24Poster.png": "/golf-app/static/media/02:24Poster.092b363ddca370e12895.png",
+    "static/media/02:24PosterFO.png": "/golf-app/static/media/02:24PosterFO.71bcfdae029446962518.png",
+    "static/media/05:24Poster.png": "/golf-app/static/media/05:24Poster.6a38d30e2e4f818c3a2f.png",
+    "static/media/03:24PosterFO.png": "/golf-app/static/media/03:24PosterFO.e5dd5f5508de6019eb0e.png",
+    "static/media/03:24Poster.png": "/golf-app/static/media/03:24Poster.f7fe7ab69dd96cbc2cfa.png",
+    "static/media/04:24Poster.png": "/golf-app/static/media/04:24Poster.c6546b27eb6fa1e17263.png",
+    "static/media/04:24PosterFO.png": "/golf-app/static/media/04:24PosterFO.fd057e5f34fa65797a69.png",
+    "static/media/05:24PosterFO.png": "/golf-app/static/media/05:24PosterFO.79a03aee1293d04417e7.png",
     "index.html": "/golf-app/index.html",
     "main.c9b5d43f.css.map": "/golf-app/static/css/main.c9b5d43f.css.map",
-    "main.af7a812b.js.map": "/golf-app/static/js/main.af7a812b.js.map",
+    "main.823785ee.js.map": "/golf-app/static/js/main.823785ee.js.map",
     "453.3863798f.chunk.js.map": "/golf-app/static/js/453.3863798f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c9b5d43f.css",
-    "static/js/main.af7a812b.js"
+    "static/js/main.823785ee.js"
   ]
 }
