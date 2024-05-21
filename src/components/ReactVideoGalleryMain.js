@@ -68,21 +68,7 @@ const ReactVideoGalleryMain = () => {
     return (
         <>
             <Fade>
-            <div className="timeline-button-container">
-                {/* Render list of scroll buttons */}
-                {data.map((item, index) => (
-                    <div className="button-class">
-                        <button 
-                        className="timeline-button"
-                        key={index} 
-                        onClick={() => scrollToItem(index)}
-                    >
-                    </button>
-                    {item.date}
-                    </div>
-                    
-                ))}
-            </div>
+            
             
                 <div className="gallery2">
                     {data.map((item, index) => (
