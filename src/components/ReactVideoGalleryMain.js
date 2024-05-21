@@ -83,7 +83,7 @@ const ReactVideoGalleryMain = () => {
                     
                 ))}
             </div>
-            <div>
+            
                 <div className="gallery2">
                     {data.map((item, index) => (
                         <div 
@@ -108,7 +108,7 @@ const ReactVideoGalleryMain = () => {
                         </div>
                     ))}
                 </div>
-            </div>
+            
             </Fade>
         </>
     );
