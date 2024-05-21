@@ -1,63 +1,91 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { Fade } from 'react-awesome-reveal';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'; // Import scroll-to-top icon
 
-// Video player
 import { DefaultPlayer as Video } from 'react-html5video';
 import 'react-html5video/dist/styles.css';
 
 import './react-video-gallery.css'
 
-import img1 from '../videos/img1.jpg'
-import video1 from '../videos/video1.mp4'
-import img2 from '../videos/img2.jpg'
-import video2 from '../videos/video2.mp4'
+import dtl1222 from '../videos/12:22DTL.mp4'
+import FOl1222 from '../videos/12:22FO.mp4'
+import dtl0524 from '../videos/05:24DTL.mov'
+import FOl0524 from '../videos/05:24FO.MOV'
+import dtl0424 from '../videos/04:24DTL.mov'
+import FOl0424 from '../videos/04:24FO.mov'
+import dtl0324 from '../videos/03:24DTL.MOV'
+import FOl0324 from '../videos/03:24FO.MOV'
+import dtl0224 from '../videos/02:24DTL.mov'
+import FOl0224 from '../videos/02:24FO.mov'
+import dtl0124 from '../videos/01:24DTL.MOV'
+import FOl0124 from '../videos/01:24FO.MOV'
 
 const ReactVideoGalleryMain = () => {
-    // Initialize the data array using useMemo
     const data = useMemo(() => [
         {
             id: 1,
-            poster: img1,
-            videoUri: video1,
-            description: 'tasdfasdfasdfasfdasdfasdfasdfasdfasdfasdfasfdasdfasdfasdfasest',
-            date: '10/2023'
+            downTheLinePoster: '',
+            faceOnPoster: '',
+            downTheLine: dtl0524,
+            faceOn: FOl0524,
+            description: 'test',
+            date: '05/2024',
+            type: 'Iron'
         },
         {
             id: 2,
-            poster: img2,
-            videoUri: video1,
+            downTheLinePoster: '',
+            faceOnPoster: '',
+            downTheLine: dtl0424,
+            faceOn: FOl0424,
             description: 'test',
-            date: '11/2023'
+            date: '04/2024',
+            type: 'Iron'
         },
         {
             id: 3,
-            poster: img2,
-            videoUri: video1,
+            downTheLinePoster: '',
+            faceOnPoster: '',
+            downTheLine: dtl0324,
+            faceOn: FOl0324,
             description: 'test',
-            date: '12/2023'
+            date: '03/2024',
+            type: 'Iron'
         },
         {
             id: 4,
-            poster: img2,
-            videoUri: video1,
+            downTheLinePoster: '',
+            faceOnPoster: '',
+            downTheLine: dtl0224,
+            faceOn: FOl0224,
             description: 'test',
-            date: '01/2024 '
+            date: '02/2024',
+            type: 'Iron'
         },
+        {
+            id: 5,
+            downTheLinePoster: '',
+            faceOnPoster: '',
+            downTheLine: dtl0124,
+            faceOn: FOl0124,
+            description: 'test',
+            date: '01/2024',
+            type: 'Iron'
+        },
+        
     ], []);
 
-    // Store references to video elements
     const [videoElements, setVideoElements] = useState([]);
 
     useEffect(() => {
-        // Add video elements to the state once after the component mounts
         const newVideoElements = [];
         data.forEach((item, index) => {
             newVideoElements[index] = React.createRef();
         });
         setVideoElements(newVideoElements);
-    }, [data, setVideoElements]); // Include data and setVideoElements as dependencies
+    }, [data, setVideoElements]);
 
-    // Function to scroll to a specific item
     const scrollToItem = (index) => {
         const element = videoElements[index].current;
         if (element) {
@@ -65,37 +93,60 @@ const ReactVideoGalleryMain = () => {
         }
     };
 
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
         <>
+            <div className='timeline-flex'>
+                Select a swing based on date
+                <div className="timeline-button-container">
+                    {data.map((item, index) => (
+                        <div className="button-class" key={index} onClick={() => scrollToItem(index)}>
+                            <CalendarMonthIcon className="timeline-button" />
+                            <div className='date-style'>{item.date}</div>
+                            <div className='type-style'>{item.type}</div>
+                        </div>
+                    ))}
+                </div>
+            </div>
             <Fade>
-            
-            
                 <div className="gallery2">
                     {data.map((item, index) => (
-                        <div 
-                            className="video-container2" 
-                            key={index}
-                            ref={videoElements[index]}
-                        >
-                            <div className='header2'>test</div>
+                        <div className="video-container2" key={index} ref={videoElements[index]}>
+                            <div className='header2'>{item.date}</div>
                             <div className="video-fade">
                                 <div className='video-container'>
                                     <Video
                                         style={{ width: '100%' }}
                                         controls={['Play', 'Seek', 'Volume']}
-                                        poster={item.poster}
                                         playsInLine
                                     >
-                                        <source src={item.videoUri} type="video/mp4" />
+                                        <source src={item.downTheLine} type="video/mp4" />
+                                    </Video>
+                                </div>
+                                <div className='video-container'>
+                                    <Video
+                                        style={{ width: '100%' }}
+                                        controls={['Play', 'Seek', 'Volume']}
+                                        poster={item.faceOnPoster}
+                                        playsInLine
+                                    >
+                                        <source src={item.faceOn} type="video/mp4" />
                                     </Video>
                                 </div>
                             </div>
                             <div className='description2'><p>{item.description}</p></div>
+                            <div className="scroll-to-top" onClick={scrollToTop}>
+                <KeyboardArrowUpIcon />
+                Scroll to top
+            </div>
                         </div>
                     ))}
                 </div>
-            
             </Fade>
+            {/* Scroll to top button */}
         </>
     );
 };

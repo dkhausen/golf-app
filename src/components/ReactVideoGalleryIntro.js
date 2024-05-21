@@ -8,24 +8,29 @@ import 'react-html5video/dist/styles.css';
 
 import './react-video-gallery.css'
 
-import img1 from '../videos/img1.jpg'
-import video1 from '../videos/video1.mp4'
-import img2 from '../videos/img2.jpg'
-import video2 from '../videos/video2.mp4'
+
+import dtl1222 from '../videos/12:22DTL.mp4'
+import FOl1222 from '../videos/12:22FO.mp4'
+import dtl0524 from '../videos/05:24DTL.mov'
+import FOl0524 from '../videos/05:24FO.MOV'
 
 const ReactVideoGalleryMain = () => {
     const [model, setModel] = useState(false);
     let data = [
         {
             id: 1,
-            poster: img1,
-            videoUri: video1,
-            description: 'tasdfasdfasdfasfdasdfasdfasdfasdfasdfasdfasfdasdfasdfasdfasest'
+            poster: '',
+            videoUri: dtl1222,
+            videoUri2: FOl1222,
+            header: '12/2022',
+            description: 'test'
         },
         {
             id: 2,
-            poster: img2,
-            videoUri: video1,
+            poster: '',
+            videoUri: dtl0524,
+            videoUri2: FOl0524,
+            header: '05/2024',
             description: 'test'
         },
     ]
@@ -42,13 +47,12 @@ const ReactVideoGalleryMain = () => {
                     return(
                     <Fade>
                             <div className="video-container" key={index}>
-                                <div className='header2'>test</div>
+                                <div className='header2'>{item.header}</div>
                                     <div className="video-fade">
                                         <div className='video-containerMain'>
                                             <Video
                                                 style={{width: '100%'}}
                                                 controls={['Play', 'Seek', 'Volume']}
-                                                poster={item.poster}
                                                 playsInLine
                                                 >
                                                     <source src={item.videoUri} type="video/mp4" />
@@ -58,10 +62,9 @@ const ReactVideoGalleryMain = () => {
                                             <Video
                                                 style={{width: '100%'}}
                                                 controls={['Play', 'Seek', 'Volume']}
-                                                poster={item.poster}
                                                 playsInLine
                                                 >
-                                                    <source src={item.videoUri} type="video/mp4" />
+                                                    <source src={item.videoUri2} type="video/mp4" />
                                             </Video>
                                         
                 

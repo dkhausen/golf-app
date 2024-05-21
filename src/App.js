@@ -5,13 +5,8 @@ import ReactVideoGalleryMain from './components/ReactVideoGalleryMain';
 function App() {
   return (
     <>
-    <div style={{
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'column'
-}}>
-    <h1>test</h1>
+    <div className="app-background-style">
+    <h1>Daniel Golfs</h1>
     <ReactVideoGalleryIntro/>
     <ReactVideoGalleryMain/>
     </div>
