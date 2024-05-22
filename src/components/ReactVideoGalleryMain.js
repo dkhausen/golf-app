@@ -130,7 +130,7 @@ const ReactVideoGalleryMain = () => {
     }, [data, setVideoElements]);
 
     const handleScroll = (direction) => {
-        const container = document.querySelector('.timeline-flex');
+        const container = document.querySelector('.timeline-buttons');
         const scrollAmount = container.clientWidth;
 
         if (direction === 'left') {
@@ -144,8 +144,8 @@ const ReactVideoGalleryMain = () => {
 
     const scrollToItem = (index) => {
         const element = videoElements[index].current;
-        const offset = document.querySelector('.timeline-flex-container').offsetHeight + 20;
         if (element) {
+            const offset = 85; // Adjust the offset as needed
             window.scrollTo({
                 top: element.offsetTop - offset,
                 behavior: 'smooth'
@@ -158,45 +158,40 @@ const ReactVideoGalleryMain = () => {
             galleryRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     };
+
+    
     
 
 
     return (
         <>
-            <div ref={galleryRef}>
-            <div className='timeline-flex-container'>
-                <div className='bold-text'>Swing Gallery</div>
-                <div className='arrow-div'>
+            <div classname='gallery-class' ref={galleryRef}>
+            
+                <div className='header2'>Clip Selector</div>
+                <div className='timeline-buttons-arrows'>
                     <ArrowBackIosIcon className="scroll-arrow" onClick={() => handleScroll('left')} style={{ color: 'white' }} />
-                    <div className='timeline-flex'>
-                        <div className="timeline-button-container">
-                            
+                    <div className = "timeline-buttons">
+                        {data.map((item, index) => (
+                        <div
+                            className={`button-class ${item.type === 'Review' ? 'review-button' : ''}`}
+                            key={index}
+                            onClick={() => scrollToItem(index)}
+                        >
+                            <CalendarMonthIcon className={` ${item.type === 'Review' ? 'review-icon' : ''}`} />
+                            <div className={`date-style ${item.type === 'Review' ? 'review-date' : ''}`}>{item.date}</div>
+                            <div className={`type-style ${item.type === 'Review' ? 'review-type' : ''}`}>{item.type}</div>
                         </div>
-                        <div className="timeline-button-container2">
-                            {data.map((item, index) => (
-                                <div
-                                    className={`button-class ${item.type === 'Review' ? 'review-button' : ''}`}
-                                    key={index}
-                                    onClick={() => scrollToItem(index)}
-                                >
-                                    <CalendarMonthIcon className={`timeline-button ${item.type === 'Review' ? 'review-icon' : ''}`} />
-                                    <div className={`date-style ${item.type === 'Review' ? 'review-date' : ''}`}>{item.date}</div>
-                                    <div className={`type-style ${item.type === 'Review' ? 'review-type' : ''}`}>{item.type}</div>
-                                </div>
-                            ))}
-                        </div>
+                    ))}
                     </div>
                     <ArrowForwardIosIcon className="scroll-arrow" onClick={() => handleScroll('right')} style={{ color: 'white' }} />
                 </div>
-            </div>
-
-            <Fade>
+           
                 <div className="gallery2">
                     {data.map((item, index) => (
-                        <div className="video-container2" key={index} ref={videoElements[index]}>
-                            <div className='header2'>{item.date}</div>
-                            <div className='header2'>{item.type}</div>
-                            <div className="video-fade">
+                        <div className="content-card" key={index} ref={videoElements[index]}>
+                            <div className='header'>{item.date}</div>
+                            <div className='header'>{item.type}</div>
+                            <div className="multi-video-container">
                                 <div className='video-container'>
                                     <Video
                                         style={{ width: '100%' }}
@@ -207,17 +202,17 @@ const ReactVideoGalleryMain = () => {
                                         <source src={item.downTheLine} type="video/mp4" />
                                     </Video>
                                 </div>
-                                {item.faceOn && (
-                                    <div className='video-container'>
-                                        <Video
-                                            style={{ width: '100%' }}
-                                            controls={['Play', 'Seek', 'Volume']}
-                                            poster={item.faceOnPoster}
-                                            playsInLine
-                                        >
-                                            <source src={item.faceOn} type="video/mp4" />
-                                        </Video>
-                                    </div>
+                                    {item.faceOn && (
+                                <div className='video-container'>
+                                            <Video
+                                                style={{ width: '100%' }}
+                                                controls={['Play', 'Seek', 'Volume']}
+                                                poster={item.faceOnPoster}
+                                                playsInLine
+                                            >
+                                                <source src={item.faceOn} type="video/mp4" />
+                                            </Video>
+                                </div>
                                 )}
                             </div>
                             <div className='description2'>
@@ -232,7 +227,7 @@ const ReactVideoGalleryMain = () => {
                         </div>
                     ))}
                 </div>
-            </Fade>
+
             </div>
         </>
     );

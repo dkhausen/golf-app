@@ -50,10 +50,10 @@ const ReactVideoGalleryMain = () => {
                 {data.map((item,index)=>{
                     return(
                     <Fade>
-                            <div className="video-container" key={index}>
-                                <div className='header2'>{item.header}</div>
-                                    <div className="video-fade">
-                                        <div className='video-containerMain'>
+                            <div className="content-card" key={index}>
+                                <div className='header'>{item.header}</div>
+                                    <div className="multi-video-container">
+                                        <div className='video-container'>
                                             <Video
                                                 style={{width: '100%'}}
                                                 controls={['Play', 'Seek', 'Volume']}
@@ -63,7 +63,7 @@ const ReactVideoGalleryMain = () => {
                                                     <source src={item.videoUri} type="video/mp4" />
                                             </Video>
                                         </div>
-                                        <div className='video-containerMain'>
+                                        <div className='video-container'>
                                             <Video
                                                 style={{width: '100%'}}
                                                 controls={['Play', 'Seek', 'Volume']}
