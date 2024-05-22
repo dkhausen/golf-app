@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/golf-app/static/css/main.d3a1c7b1.css",
-    "main.js": "/golf-app/static/js/main.1c80569e.js",
+    "main.css": "/golf-app/static/css/main.76e0c53c.css",
+    "main.js": "/golf-app/static/js/main.66fad386.js",
     "static/js/453.3863798f.chunk.js": "/golf-app/static/js/453.3863798f.chunk.js",
     "static/media/04:24Feedback.mov": "/golf-app/static/media/04:24Feedback.dac46334d9261c15638e.mov",
     "static/media/03:24Feedback.mp4": "/golf-app/static/media/03:24Feedback.0f0bf7528df8934963ba.mp4",
@@ -36,12 +36,12 @@
     "static/media/04:24PosterFO.png": "/golf-app/static/media/04:24PosterFO.fd057e5f34fa65797a69.png",
     "static/media/05:24PosterFO.png": "/golf-app/static/media/05:24PosterFO.79a03aee1293d04417e7.png",
     "index.html": "/golf-app/index.html",
-    "main.d3a1c7b1.css.map": "/golf-app/static/css/main.d3a1c7b1.css.map",
-    "main.1c80569e.js.map": "/golf-app/static/js/main.1c80569e.js.map",
+    "main.76e0c53c.css.map": "/golf-app/static/css/main.76e0c53c.css.map",
+    "main.66fad386.js.map": "/golf-app/static/js/main.66fad386.js.map",
     "453.3863798f.chunk.js.map": "/golf-app/static/js/453.3863798f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d3a1c7b1.css",
-    "static/js/main.1c80569e.js"
+    "static/css/main.76e0c53c.css",
+    "static/js/main.66fad386.js"
   ]
 }
