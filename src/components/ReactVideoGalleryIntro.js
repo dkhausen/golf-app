@@ -28,7 +28,7 @@ const ReactVideoGalleryMain = () => {
             videoUri: dtl1222,
             videoUri2: FOl1222,
             header: '12/2022',
-            description: 'test'
+            description: 'The first swing posted to the Milo Lines Academy forum for online review and feedback.'
         },
         {
             id: 2,
@@ -37,7 +37,7 @@ const ReactVideoGalleryMain = () => {
             videoUri: dtl0524,
             videoUri2: FOl0524,
             header: '05/2024',
-            description: 'test'
+            description: 'The latest iron swing after a few years of bi-weekly swing reviews, lessons, and video content.'
         },
     ]
 
@@ -77,7 +77,7 @@ const ReactVideoGalleryMain = () => {
                                         </div>
                                     
                                 </div>
-                                <div className='description2'><p>{item.description}</p></div>
+                                <div className='description2'>{item.description}</div>
                             </div>
                            
                             
