@@ -27,7 +27,7 @@ const ReactVideoGalleryMain = () => {
             faceOnPoster: posterFO1212,
             videoUri: dtl1222,
             videoUri2: FOl1222,
-            header: '12/2022',
+            header: 'December 2021',
             description: 'The first swing posted to the Milo Lines Academy forum for online review and feedback.'
         },
         {
@@ -36,7 +36,7 @@ const ReactVideoGalleryMain = () => {
             faceOnPoster: posterFO0524,
             videoUri: dtl0524,
             videoUri2: FOl0524,
-            header: '05/2024',
+            header: 'May 2024',
             description: 'The latest iron swing after a few years of bi-weekly swing reviews, lessons, and video content.'
         },
     ]

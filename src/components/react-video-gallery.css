@@ -1,3 +1,48 @@
+.intro-style {
+   padding-bottom: 20px;
+   padding-top: 20px;
+}
+
+.main-style {
+    background: black;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    
+}
+
+.header6 {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    text-wrap: wrap;
+    align-items: center;
+    width: 30%;
+    min-height: 20px;
+    justify-content: center;
+    border-radius: 6px;
+    color:black;
+    font-weight: 699;
+}
+
+.header3 {
+    display: flex;
+    justify-content: center;
+    font-weight: 1000;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.header4 {
+    display: flex;
+    justify-content: center;
+    font-weight: 1000;
+    font-size: 30px;
+    margin-bottom: 5px;
+    color:white
+}
+
+
 /* Gallery styles */
 .gallery {
     -webkit-column-count: 2;
@@ -16,8 +61,9 @@
     -webkit-column-width: 33%;
     -moz-column-width: 33%;
     column-width: 33%;
-    padding: 0.8rem;
+    padding-top: 5px;
     margin: 0 auto;
+    background-color: black;
 }
 
 /* Multi-video container */
@@ -45,7 +91,7 @@
     }
 
     .timeline-buttons-arrows {
-        max-width: 355px;
+        max-width: 390px;
     }
     .timeline-buttons-arrows::-webkit-scrollbar {
         display: none; /* Hide the scrollbar on mobile */
@@ -58,13 +104,12 @@
     .gallery, .gallery2 {
         column-count: 1;
         column-width: 100%;
-        padding: 0.8rem;
         max-width: 400px;
         margin: 0 auto;
     }
 
     .timeline-buttons-arrows {
-        max-width: 390px;
+        max-width: 500px;
         overflow-x:hidden;
     }
     .timeline-buttons-arrows::-webkit-scrollbar {
@@ -82,7 +127,7 @@
         justify-content: flex-start; /* Align buttons to the left */
         padding-left: 5px; /* Add left padding to the container */
         padding-right: 5px; /* Add right padding to the container */
-        max-width: 480px;
+        max-width: 520px;
         overflow-x:hidden;
     }
 
@@ -94,14 +139,15 @@
         column-count: 2;
         column-width: 100%;
         padding: 0.8rem;
-        max-width:1000px;
+        max-width: 100%;
         margin: 0 auto;
     }
 
     .gallery2 {
         column-count: 1;
         column-width: 100%;
-        padding: 0.8rem;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
         max-width: 1000px;
         margin: 0 auto;
     }
@@ -174,13 +220,13 @@
     min-height: 20px;
     justify-content: center;
     border-radius: 6px;
-    color: black;
+    color: white;
     font-weight: 699;
 }
 
 .app-background-style {
-    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
-    display: flex;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(5,35,68,1) 100%);display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -200,7 +246,7 @@
 
 .line-items {
     margin-top: 10px;
-    color: aquamarine;
+    color: #0c5eb8;
     font-style: italic;
 }
 
@@ -274,7 +320,6 @@ p {
     position: sticky;
     top: 0;
     z-index: 999;
-    border-radius: 5px;
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
     flex-direction: row;
@@ -286,6 +331,8 @@ p {
     margin: 0 auto;
     overflow-x: auto; /* Add horizontal scrolling */
     overflow-y: hidden; /* Hide vertical overflow */
+    border-top: solid 1px;
+    border-color: white;
     
 }
 .timeline-buttons-arrows::-webkit-scrollbar {
@@ -319,9 +366,7 @@ p {
 .scroll-arrow.right {
     right: 0; /* Position arrow to the right */
 }
-.gallery2 {
-    padding-top: 50px; /* Adjust padding-top to account for the height of the sticky container */
-}
+
 
 .slider-class{
     display: flex;
@@ -350,6 +395,7 @@ p {
     font-weight: 300;
     font-size: 15px;
     margin-bottom: 5px;
+    color:white;
 }
 
 /* Scroll to top styles */
@@ -377,5 +423,9 @@ p {
 
 /* Review-specific styles */
 .review-button, .review-icon, .review-date, .review-type {
+    color: red;
+}
+
+.review-button {
     color: red;
 }

@@ -36,6 +36,9 @@ import dtl1223 from '../videos/12:23DTL.mov';
 import FOl1223 from '../videos/12:23FO.mov';
 import feedback0424 from '../videos/04:24Feedback.mov';
 import feedbackPoster0424 from '../videos/04:24FeedbackPoster.png';
+import feedback0324 from '../videos/03:24Feedback.mp4';
+import feedbackPoster0324 from '../videos/03:24FeedbackPoster.png';
+
 
 const ReactVideoGalleryMain = () => {
     const galleryRef = createRef(null);
@@ -83,6 +86,17 @@ const ReactVideoGalleryMain = () => {
             description2: '-',
             date: '03/2024',
             type: 'Iron'
+        },
+        {
+            id: 3,
+            downTheLinePoster: feedbackPoster0324,
+            faceOnPoster: '',
+            downTheLine: feedback0324,
+            faceOn: '',
+            description: 'A swing review from Milo.',
+            description2: '-',
+            date: '03/2024',
+            type: 'Review'
         },
         {
             id: 5,
@@ -145,7 +159,7 @@ const ReactVideoGalleryMain = () => {
     const scrollToItem = (index) => {
         const element = videoElements[index].current;
         if (element) {
-            const offset = 85; // Adjust the offset as needed
+            const offset = 95; // Adjust the offset as needed
             window.scrollTo({
                 top: element.offsetTop - offset,
                 behavior: 'smooth'
@@ -166,7 +180,6 @@ const ReactVideoGalleryMain = () => {
     return (
         <>
             <div classname='gallery-class' ref={galleryRef}>
-            
                 <div className='header2'>Clip Selector</div>
                 <div className='timeline-buttons-arrows'>
                     <ArrowBackIosIcon className="scroll-arrow" onClick={() => handleScroll('left')} style={{ color: 'white' }} />
@@ -189,8 +202,8 @@ const ReactVideoGalleryMain = () => {
                 <div className="gallery2">
                     {data.map((item, index) => (
                         <div className="content-card" key={index} ref={videoElements[index]}>
-                            <div className='header'>{item.date}</div>
-                            <div className='header'>{item.type}</div>
+                            <div className={`header ${item.type === 'Review' ? 'review-date' : ''}`}>{item.date}</div>
+                            <div className={`header ${item.type === 'Review' ? 'review-type' : ''}`}>{item.type}</div>
                             <div className="multi-video-container">
                                 <div className='video-container'>
                                     <Video
@@ -217,7 +230,6 @@ const ReactVideoGalleryMain = () => {
                             </div>
                             <div className='description2'>
                                 <div>{item.description}</div>
-                                <div className='line-items-header'>Feedback from coaches:</div>
                                 <div className='line-items'>{item.description2}</div>
                             </div>
                             <div className="scroll-to-top" onClick={scrollToTop}>
